@@ -1,0 +1,9 @@
+services:
+  provider:
+    build: .
+    ports:
+      - "3100:3100"
+    environment:
+      PORT: "3100"
+      PROVIDER_ADDRESS: "${PROVIDER_ADDRESS:-0x0000000000000000000000000000000000000000}"
+      WEBHOOK_SECRET: "${WEBHOOK_SECRET:-}"
